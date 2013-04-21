@@ -6,6 +6,19 @@ window.onload=function(){
             all[i].childNodes[0].className += " taster";
             all[i].childNodes[2].style.display = 'none'; 
         }
+        var hash=document.location.hash.substr(1);
+        if(typeof hash !== 'undefined' && hash.length > 1) {
+                var els=document.getElementsByTagName('h2');
+                for(var i in els) {
+                        var name = els[i].innerHTML +'';
+                        if((name.replace(' ', '').toLowerCase()).indexOf(hash) !== -1){
+                                playTheShit(i);
+                                break;
+                        }
+                }
+
+        }
+
 }
 
 function playTheShit(id)

@@ -1,7 +1,7 @@
 window.onload=function(){
         var all = document.getElementsByClassName('klang');
         for(var i = 0; i < all.length; i++) { 
-            all[i].childNodes[0].setAttribute('onClick', 'getAudioById(' + i + ').play()'); 
+            all[i].childNodes[1].setAttribute('onClick', 'getAudioById(' + i + ').play()'); 
             all[i].childNodes[1].className += " taster";
             all[i].childNodes[3].style.display = 'none'; 
         }
@@ -30,5 +30,5 @@ function playlist(){
 }
 
 function getAudioById(id){
-	return document.getElementsByClassName("klang")[id].childNodes[2];
+	return document.getElementsByClassName("klang")[id].childNodes[3];
 }
